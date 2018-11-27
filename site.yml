@@ -1,0 +1,22 @@
+runtime:
+  cache_dir: ./.cache/antora
+site:
+  title: Istio Hybridizer Docs
+  url: https://redhat-developer-demos.github.io/openshift-hybridizer/
+  start_page: openshift-hybridizer::index.adoc
+
+content:
+  sources:
+    - url: https://github.com/redhat-developer-demos/openshift-hybridizer.git
+      branches: master
+      start_path: documentation
+    - url: https://github.com/redhat-developer-demos/istio-tutorial.git
+      branches: master
+      start_path: documentation
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+output:
+  dir: ./docs
